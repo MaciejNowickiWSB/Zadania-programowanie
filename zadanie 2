@@ -1,4 +1,4 @@
-#1 Write a Python program to sum all the items in a list.
+#1 Write a Python program to sum all the items in a list
 def sum_list(items):
     sum_numbers = 0
     for x in items:
@@ -6,7 +6,7 @@ def sum_list(items):
     return sum_numbers
 print(sum_list([1, 2, -8]))
 
-#2 Write a Phyton program to multiply all the items in a list.
+#2 Write a Phyton program to multiply all the items in a list
 def multiply_list(items):
     tot = 1
     for x in items:
@@ -14,7 +14,7 @@ def multiply_list(items):
     return tot
 print(multiply_list([1, 2, -8]))
 
-#3 Write a Phyton program to get the largest number from a list.
+#3 Write a Phyton program to get the largest number from a list
 def max_num_in_list(list):
     max = list[0]
     for a in list:
