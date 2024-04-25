@@ -1,4 +1,4 @@
-#1
+#1 Write a Python program to calculate the length of a string
 def str_length(str1):
     count = 0
     for char in str1:
@@ -6,7 +6,7 @@ def str_length(str1):
     return count
 print(str_length('test'))
 
-#2
+#2 Write a Python program to count the number of characters (character frequency) in a string
 def char_frequency(str1):
     freq = {}
     for n in str1:
@@ -18,7 +18,8 @@ def char_frequency(str1):
     return freq
 print(char_frequency('facebook.com'))
 
-#3
+#3 Write a Python program to get a string made of the first 2 and last 2 characters of
+#a given string. If the string length is less than 2, return the empty string instead
 def string_ends(str):
     if len(str) < 2:
         return ''
@@ -27,7 +28,8 @@ print(string_ends('wsb.pl'))
 print(string_ends('mn'))
 print(string_ends('M'))
 
-#4
+#4 Write a Python program to get a string from a given string where all occurrences
+#of its first char have been changed to '$', except the first char itself
 def change_char(str1):
     char = str1[0]
     str1 = str1.replace(char, '$')
@@ -35,14 +37,17 @@ def change_char(str1):
     return str1
 print(change_char('test'))
 
-#5
+#5 Write a Python program to get a single string from two given strings, separated
+#by a space and swap the first two characters of each string
 def chars_mix(a, b):
     new_a = b[:2] + a[2:]
     new_b = a[:2] + b[2:]
     return new_a + ' ' + new_b
 print(chars_mix('abc', 'xyz'))
 
-#6
+#6 Write a Python program to add 'ing' at the end of a given string (length should
+#be at least 3). If the given string already ends with 'ing', add 'ly' instead.
+#If the string length of the given string is less than 3, leave it unchanged
 def add_string(str1):
     length = len(str1)
     if length > 2:
@@ -55,7 +60,9 @@ print(add_string('MN'))
 print(add_string('wsb'))
 print(add_string('testing'))
 
-#7
+#7 Write a Python program to find the first appearance of the substrings 'not'
+#and 'poor' in a given string. If 'not' follows 'poor', replace the whole 
+#'not'...'poor' substring with 'good'. Return the resulting string
 def not_poor(str1):
     snot = str1.find('not')
     spoor = str1.find('poor')
@@ -67,7 +74,8 @@ def not_poor(str1):
 print(not_poor('The lyrics is not that poor!'))
 print(not_poor('The lyrics is poor!'))
 
-#8
+#8 Write a Python function that takes a list of words and return the longest
+#word and the length of the longest one
 def find_longest_word(words_list):
     word_len = []
     for n in words_list:
@@ -78,7 +86,7 @@ result = find_longest_word(["Python", "Java", "C++"])
 print("\nLongest word: ", result[1])
 print("Length of the longest word: ", result[0])
 
-#9
+#9 Write a Python program to remove the nth index character from a nonempty string
 def remove_char(str, n):
     first_part = str[:n]
     last_part = str[n+1:]
@@ -87,13 +95,14 @@ print(remove_char('Python', 1))
 print(remove_char('Python', 4))
 print(remove_char('Python', 2))
 
-#10
+#10 Write a Python program to change a given string to a newly string where the
+#first and last chars have been exchanged
 def change_string(str1):
     return str1[-1:] + str1[1:-1] + str1[:1]
 print(change_string('Python'))
 print(change_string('04032003'))
 
-#11
+#11 Write a Python program to remove characters that have odd index values in a given string
 def odd_values_string(str):
     result = ""
     for i in range(len(str)):
@@ -103,7 +112,7 @@ def odd_values_string(str):
 print(odd_values_string('alphabet'))
 print(odd_values_string('python'))
 
-#12
+#12 Write a Python program to count the occurrences of each word in a given sentence
 def word_count(str):
     counts = dict()
     words = str.split()
@@ -115,37 +124,41 @@ def word_count(str):
     return counts
 print( word_count('the quick brown fox jumps over the lazy dog.'))
 
-#13
+#13 Write a Python program to count the occurrences of each word in a given sentence
 user_input = input("What's your favorite language? ")
 print("My favorite language is ", user_input.upper())
 print("My favorite language is ", user_input.lower())
 
-#14
+#14 Write a Python program that accepts a comma-separated sequence of words as input
+#and prints the distinct words in sorted form (alphanumerically)
 items = input("Input comma-separated sequence of words")
 words = [word for word in items.split(",")]
 print(",".join(sorted(list(set(words)))))
 
-#15
+#15 Write a Python function to create an HTML string with tags around the word(s)
 def add_tags(tag, word):
     return "<%s>%s</%s>" % (tag, word, tag)
 print(add_tags('i', 'Python'))
 print(add_tags('b', 'Python Tutorial'))
 
-#16
+#16 Write a Python function to insert a string in the middle of a string
 def insert_string_middle(str, word):
     return str[:2] + word + str[2:]
 print(insert_string_middle('[[]]', 'Python'))
 print(insert_string_middle('{{}}', 'PHP'))
 print(insert_string_middle('<<>>', 'HTML'))
 
-#17
+#17 Write a Python function to get a string made of 4 copies of the last
+#two characters of a specified string (length must be at least 2)
 def insert_end(str):
     sub_str = str[-2:]
     return sub_str * 4
 print(insert_end('Python'))
 print(insert_end('Exercises'))
 
-#18
+#18 Write a Python function to get a string made of the first three
+#characters of a specified string. If the length of the string is
+#less than 3, return the original string
 def first_three(str):
     if len(str) > 3:
         return str[:3]
@@ -155,12 +168,12 @@ print(first_three('ipy'))
 print(first_three('python'))
 print(first_three('py'))
 
-#19
+#19 Write a Python program to get the last part of a string before a specified character
 str1 = 'https://www.w3resource.com/python-exercises/string'
 print(str1.rsplit('/', 1)[0])
 print(str1.rsplit('-', 1)[0])
 
-#20
+#20 Write a Python function to reverse a string if its length is a multiple of 4
 def reverse_string(str1):
     if len(str1) % 4 == 0:
         return ''.join(reversed(str1))
